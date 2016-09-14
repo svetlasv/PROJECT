@@ -10,10 +10,6 @@
 	font-family: Candara;
 	src: url(../fonts/CANDARA.TTF);
 }
-@font-face {
-	font-family: "Candara Bold";
-	src: url(../fonts/Candara Bold.ttf);
-}
 
 body {
 	max-width: 1280px;
@@ -33,18 +29,17 @@ h1, h2, h3 {
 h2 {
 	font-size: 40px;
 	color: #131313;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding: 40px 10px;
 }
-
-
-.row.top_bg {
+.top_bg {
 	display: block;
 	background-image: url("../img/top_bg.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
+
 }
-.row.top_bg h1 {
+.top_bg h1 {
 	padding-top: 550px;
 	padding-bottom: 100px;
 	font: 150px Arial;
@@ -59,17 +54,21 @@ h2 {
     height: 160px;
     width: 212px; 
 }
-div.top_string {
+div.top {
 	margin-top: 20px;
 	background-color: rgba(255, 255, 255, 0.9);
 }
-.top_string p, h4 {
+.top p, h4 {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
+.top_string {
+	padding: 7px 0px;
+}
+
 .lang {
 	display: inline-block;
-	padding: 20px 45px;
+	padding-left: 45px;
 }
 .lang a {
 	font: 20px Calibri;
@@ -82,16 +81,20 @@ div.top_string {
 	text-decoration: none;
 }
 .webcamera {
-	display: inline-block;
-	padding: 22px 0px;
 	text-align: center;
 	font: 20px Calibri;
 	color: #131313;
 }
+.webcamera img {
+	display: inline-block;
+}
+.webcamera p {
+	display: inline-block;
+	padding-left: 20px;
+}
 .telephone {
 	display: inline-block;
 	text-align: center;
-	padding: 9px 0px;
 }
 .number {
 	display: inline-block;
@@ -115,11 +118,11 @@ div.top_string {
 
 		/*Меню*/
 .navbar {
-    min-height: 50px;
     margin: 0px -15px;
     border: none;
     border-radius: 0px;
 }
+
 .navbar-default {
     background-color: #c5f591;
     border-color: none;
@@ -201,7 +204,6 @@ section.advatages {
 		/*Зявка регистрация*/
 section.application {
 	position: relative;
-	padding-right: 10px;
 	background-color: #cbcbc4;
 }
 .left_side {
@@ -218,7 +220,7 @@ div.arrow_bg {
 	top: 40px;
 	left: 3%;
 	min-height: 180px;
-	min-width: 100%;
+	min-width: 97%;
 	background-image: url("../img/white_arrow.png");
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -226,7 +228,7 @@ div.arrow_bg {
 .arrow_bg p {
 	display: inline-block;
 	position: absolute;
-	top: 65px;
+	top: 70px;
 	left: 4%;
 	font: 26px/28px Candara;
 	color: #8f2518;
@@ -284,6 +286,8 @@ div.right_side {
 
 		/*Поиск апартаментов*/
 section.search_apartment {
+	margin-left: -15px;
+	margin-right: -15px;
 	padding-bottom: 50px;
 	background-color: #ccb895;
 	background-image: url("../img/lines2.png");
@@ -307,10 +311,21 @@ select.form-control {
 	margin: 0px;
 	color: #353333;
 }
+.checkbox+.checkbox {
+    margin-top: 0px;
+}
 .square_slider {
 	display: inline-block;
 	width: 100%;
 	margin: 20px 15px 35px 15px;
+}
+.square_slider p {
+	display: inline-block;
+}
+#distance {
+	float: right;
+	text-align: right;
+	margin-left: 10px;
 }
 #slider-range_1 {
 	max-width: 100%;
@@ -320,17 +335,18 @@ select.form-control {
     border-radius: 5px;
 }
 #minSquare {
-	max-width: 80px;
+	max-width: 35px;
 	border: 0px;
 	background-color: #ccb895;
 }
 #maxSquare {
-	max-width: 80px;
+	max-width: 35px;
 	float: right;
 	text-align: right;
 	border: 0px;
 	background-color: #ccb895;
 }
+
 #slider-range_2 {
 	max-width: 100%;
 	margin: 15px 0px 20px;
@@ -341,6 +357,9 @@ select.form-control {
 .cost_slider {
 	width: 100%;
 	margin: 20px 15px 35px 15px;
+}
+.cost_slider p {
+	display: inline-block;
 }
 #minCost {
 	max-width: 80px;
@@ -385,12 +404,8 @@ select.form-control {
 .currency_form {
 	margin-top: 55px;
 }
-.button {
+ {
 	display: inline-block;
-	-webkit-transform: transleteX(85%);
-	-ms-transform: transleteX(85%);
-	-moz-transform: transleteX(85%);
-	-o-transform: transleteX(85%);
 }
 .button input {
 	width: 200px;
@@ -402,34 +417,11 @@ select.form-control {
 	font-size: 22px;
 	color: #131313;
 }
-#delete {
-	margin-right: 35px;
-}
-#find {
-	margin-left: 35px;
+.button input#submit_style {
+	width: 100%;
+	background-color: #96d94d;
 }
 
-@media (max-width: 1199px) {
-	.row.top_bg h1 {
-		padding-top: 300px;
-		padding-bottom: 100px;
-		font: 135px Arial;
-	}
-}
-@media (max-width: 970px) {
-	.row.top_bg h1 {
-		padding-top: 150px;
-		padding-bottom: 90px;
-		font: 110px Arial;
-	}
-}
-@media (max-width: 750px) {
-	.row.top_bg h1 {
-		padding-top: 150px;
-		padding-bottom: 100px;
-		font: 60px Arial;
-	}
-}
 @media (max-width: 1292px) {
 	.logo {
 	    width: 16.65%; 
@@ -440,13 +432,90 @@ select.form-control {
 	    width: 200px; 
 	}
 }
+@media (max-width: 1199px) {
+	.top_string {
+		padding: 22px 0px;
+	}
+}
+@media (max-width: 994px) {
+	.webcamera img {
+		display: none;
+	}
+	.webcamera p {
+		padding-left: 0px;
+	}
+}
+@media (max-width: 768px) {
+	.telephone {
+		padding-top: 25px;
+	}
+}
+@media (min-width: 768px) and (max-width: 891px) {
+	.navbar {
+   		min-height: 0px;
+   	}
+	.navbar-default .navbar-nav>li>a {
+		font-size: 20px;
+	}
+	.navbar-default .navbar-nav>li>a:hover {
+		font-size: 20px;
+	}
+	.nav>li>a {
+		padding: 10px 12px;
+	}
+}
+@media (min-width: 768px) {
+	.navbar-collapse {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+}
 @media (max-width: 768px) {
 	.dropdown_submenu {
 		position: static;
 	}
 }
-@media (max-width: 992px) {
-	.webcamera {
-		padding-top: 22px;
+@media (max-width: 1199px) {
+	.top_bg h1 {
+		padding-top: 400px;
+		padding-bottom: 100px;
+		font: 135px Arial;
+	}
+}
+@media (max-width: 970px) {
+	.top_bg h1 {
+		padding-top: 250px;
+		padding-bottom: 100px;
+		font: 110px Arial;
+	}
+}
+@media (max-width: 768px) {
+	.top_bg h1 {
+		padding-top: 180px;
+		padding-bottom: 100px;
+		font: 70px Arial;
+	}
+}
+@media (max-width: 1350px) {
+	.slick-next {
+		right: 30px;
+	}
+}
+@media (max-width: 768px) {
+	div.arrow_bg {
+		background-size: cover;
+	}
+}
+@media (max-width: 1199px) {
+	.arrow_bg p {
+		max-width: 504px;
+	}
+}
+@media (min-width: 768px) {
+	#delete {
+		margin-right: 35px;
+	}
+	#find {
+		margin-left: 35px;
 	}
 }
