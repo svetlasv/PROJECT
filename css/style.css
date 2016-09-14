@@ -422,6 +422,45 @@ select.form-control {
 	background-color: #96d94d;
 }
 
+	/*Информация*/
+section.information {
+	background-color: #cbcbc4;
+	text-align: center;
+	padding: 45px 0px;
+}
+section.information a {
+	display: inline-block;
+}
+section.information a:hover {
+	text-decoration: none;
+	opacity: 0.7;
+}
+section.information a:focus {
+    outline: 0px;
+    text-decoration: none;
+}
+.bg_inform {
+	background-image: url("../img/bg_info.png");
+	background-repeat: no-repeat;
+	width: 296px;
+	height: 296px;
+}
+.content_position {
+	position: relative;
+	top: 60px;
+	text-align: center;
+}
+.content_position img {
+	
+}
+.content_position p {
+	font-size: 34px;
+	line-height: 40px;
+	padding-top: 20px;
+	color: #676767;
+}
+
+
 @media (max-width: 1292px) {
 	.logo {
 	    width: 16.65%; 
@@ -504,6 +543,12 @@ select.form-control {
 @media (max-width: 768px) {
 	div.arrow_bg {
 		background-size: cover;
+	}
+	section.information a {
+		padding-bottom: 30px;
+	}
+	section.information a#tech {
+		padding-bottom: 0px;
 	}
 }
 @media (max-width: 1199px) {
