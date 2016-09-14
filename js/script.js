@@ -1,13 +1,14 @@
  $('.center').slick({
     dots: true,
+    arrows: true,
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 3,
     responsive: [
       {
-        breakpoint: 980,
+        breakpoint: 1000,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
           centerPadding: '50px',
           slidesToShow: 2
@@ -16,16 +17,25 @@
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
           centerPadding: '40px',
+          slidesToShow: 2
+        }
+       },
+      {
+        breakpoint: 690,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: '100px',
           slidesToShow: 1
         }
       },
-      {
-        breakpoint: 480,
+            {
+        breakpoint: 550,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
           centerPadding: '40px',
           slidesToShow: 1
@@ -67,12 +77,12 @@ $( function() {
       max: 200,
       values: [ 50, 150 ],
       slide: function( event, ui ) {
-        $( "#minSquare" ).val( ui.values[ 0 ] + "м2" );
-        $( "#maxSquare" ).val( ui.values[ 1 ] + "м2" );
+        $( "#minSquare" ).val( ui.values[ 0 ] );
+        $( "#maxSquare" ).val( ui.values[ 1 ] );
       }
     });
-    $( "#minSquare" ).val( $( "#slider-range_1" ).slider( "values", 0 ) + " м2" );
-    $( "#maxSquare" ).val( $( "#slider-range_1" ).slider( "values", 1 ) + " м2" );
+    $( "#minSquare" ).val( $( "#slider-range_1" ).slider( "values", 0 ) );
+    $( "#maxSquare" ).val( $( "#slider-range_1" ).slider( "values", 1 ) );
   } );
 
 $( function() {
